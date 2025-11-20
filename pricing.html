@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeveloperBee - Pricing Plan 2025</title>
+    <meta name="description" content="Affordable and transparent pricing for web development, app development, social media management, and more. Tailored for Indian small businesses, startups, and creators.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Hiding scrollbar cannot be done with inline styles, must be in a style block */
+        .scroll-cards-container::-webkit-scrollbar {
+            display: none; /* WebKit */
+        }
+        .scroll-cards-container {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        /* Animation keyframes (Also must be in a style block) */
+        @keyframes fadeInSlide {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Basic styles needed for the inline elements to function correctly */
+        .pricing-card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlide 0.5s ease-out forwards;
+        }
+        
+        .popular {
+            /* To allow the badge to stick out */
+            position: relative; 
+            overflow: visible; 
+            /* To visually differentiate the popular card slightly on desktop */
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+        
+        .popular-badge {
+            position: absolute; 
+            top: -15px; 
+            right: 20px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="island-header" id="mainHeader">
+        <div class="island-logo">
+            <img src="static/Design.jpeg" alt="developerbee Logo"> DeveloperBee
+        </div>
+        <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="island-nav" id="headerNav">
+            <li><a href="index.html">Home</a></li>
+            <li tabindex="0">
+                <a href="services.html">Services</a>
+                <div class="services-dropdown">
+                    <a href="services.html#web-app-development">Web & App Development</a>
+                    <a href="services.html#ui-ux-design">UI/UX Design</a>
+                    <a href="services.html#seo-site-optimization">SEO & Optimization</a>
+                    <a href="services.html#ml-automation">ML & Automation</a>
+                    <a href="services.html#business-analysis">Business Analysis</a>
+                    <a href="services.html#product-packaging">Product Packaging</a>
+                </div>
+            </li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <div class="island-action">
+            <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        </div>
+    </header>
+    <main>
+        <section class="pricing-section page-section reveal" style="padding: 80px 20px;">
+            <div class="pricing-hero" data-aos="fade-down" style="text-align: center; margin-bottom: 60px;">
+                <h1 style="font-size: 2.5em;">🎯 DeveloperBee Services – Price Plan (2025)</h1>
+                <p><strong>Target:</strong> Indian Small Businesses, Retailers, Startups, and Creators<br>
+                <em>All prices are in ₹INR and flexible based on scope, features, and support model.</em></p>
+                <div class="callout" style="background: rgba(0, 212, 255, 0.12); color: #00d4ff; padding: 10px 20px; border-radius: 6px; display: inline-block; margin-top: 15px; font-weight: bold;">Pitch-deck ready, transparent, and startup-friendly pricing 🚀</div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">1. Web & App Development</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Static Website (HTML/CSS/JS)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for showcasing a portfolio or a small business.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A professional and fast-loading website perfect for showcasing your business.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>4-5 Custom Pages</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-mobile-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Mobile-Responsive Design</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-line" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Basic SEO Setup</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-envelope" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Contact Form</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹2,000–₹4,999</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    
+                    <div class="pricing-card card-snap-point popular" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #00d4ff; border-radius: 12px; padding: 35px 30px 30px 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <div class="popular-badge" style="position: absolute; top: -15px; right: 20px; background-color: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1;">Most Popular</div>
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Dynamic Website (Flask/PHP)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for businesses that need to manage content and users.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A data-driven website with a backend for managing content and users.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-user-shield" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Admin Panel</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-sign-in-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>User Login & Forms</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-database" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Database Integration</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fab fa-whatsapp" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>WhatsApp Order Integration</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹5,000–₹12,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">E-commerce Store</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for businesses that want to sell products online.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A complete online store to sell your products and receive payments.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-store" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Product Catalog</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-shopping-cart" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Shopping Cart & Checkout</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-credit-card" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Razorpay Payment Gateway</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-tasks" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Order Management</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹8,000–₹25,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    
+                    <div class="pricing-card card-snap-point" style="--i:4; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Android App (WebView/Basic)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for businesses that want a simple mobile presence.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A simple app that displays your existing website in a native container.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-mobile-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Lightweight & Fast</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-link" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Connected to your Website</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-image" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Splash Screen</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fab fa-google-play" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Play Store Submission</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹3,000–₹7,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    
+                    <div class="pricing-card card-snap-point" style="--i:5; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Full Android App (API + UI)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for businesses that need a feature-rich mobile app.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A feature-rich native Android app with a custom user interface.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-drafting-compass" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Custom Native UI</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-cogs" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>API Integration</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-database" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Database & Authentication</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-bell" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Push Notifications</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹15,000–₹50,000+</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">2. Social Media Handling (Instagram, FB, YouTube)</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Basic</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for maintaining a consistent online presence.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Covers essential content creation and scheduling across platforms.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-pencil-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>8 Posts & 4 Reels</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-tag" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Custom Captions & Hashtags</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-calendar-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Content Scheduling</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹2,000–₹3,500</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point popular" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #00d4ff; border-radius: 12px; padding: 35px 30px 30px 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <div class="popular-badge" style="position: absolute; top: -15px; right: 20px; background-color: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1;">Growth Focus</div>
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Growth</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for businesses actively looking to increase followers.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">More frequent content, targeted at increasing reach and engagement.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-bullhorn" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>15 Posts & 8 Reels</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-bar" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Detailed Analytics Report</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Basic Strategy Consultation</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹4,000–₹6,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Brand Manager</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for full, hands-off social media management.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Complete content, engagement, and strategic management.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-bolt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Daily Content Strategy</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-comments" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>DM & Comment Replies</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-rocket" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Dedicated Growth Strategy</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹8,000–₹15,000+</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">3. Media Support (Reels, Festival Posts, Graphics)</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Festival Post Pack</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for seasonal marketing and holiday wishes.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Professionally designed graphics for upcoming festivals.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-gift" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>5 Editable Creatives</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-palette" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Canva/Figma Files</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-calendar-day" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Major Indian Festivals</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹499–₹999</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Reels (Editing Only)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for raw video footage that needs polishing.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">We take your raw footage and turn it into engaging reels.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-cut" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>30-60 sec Edit</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-magic" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Transitions & Music Sync</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-closed-captioning" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Basic Subtitles</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹200–₹500 each</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Reels (Script + Edit)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for structured, high-impact video marketing.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">We handle the entire creative process from idea to final edit.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Idea Generation & Hook</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-book" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Script Writing</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-video" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Full Professional Edit</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹500–₹1,000 each</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:4; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Brand Pack (Monthly)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for consistent monthly branding content.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A package of posts, reels, and templates for continuous branding.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-images" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>15 Posts + 8 Reels</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-drafting-compass" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Branded Templates</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-export" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Ready-to-Post Files</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹3,000–₹5,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">4. Cybersecurity Services</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Basic Security Audit</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for quick website health check and vulnerability scan.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Identification of basic security flaws and setup verification.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-search" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Full Website Scan</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-lock" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>SSL & Header Check</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-medical-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Simple Fix Report</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹1,500–₹3,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Web App Penetration Testing</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for dynamic web apps that handle sensitive user data.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">In-depth testing against common web vulnerabilities (OWASP Top 10).</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-bug" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>OWASP Top 10 Testing</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-clipboard-list" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Detailed Vulnerability Report</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-tools" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Remediation Advice</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹7,000–₹15,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Server Hardening</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for VPS or cloud users needing robust server security.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Securing your operating system and server environment.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-server" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>VPS/Linux/Cloud Setup</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-shield-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Secure Configuration</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-firewall" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Firewall Implementation</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹5,000–₹12,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:4; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Bug Bounty Support</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for security researchers needing help with submission.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Assistance with vulnerability research and report writing.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-microscope" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Vulnerability Research</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-upload" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Professional Report Writing</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Submission Review</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹3,000–₹7,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">5. ML & Automation</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">ML Model (Basic)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for simple classification or prediction tasks.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">End-to-end Machine Learning pipeline development.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-csv" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>CSV Data Processing</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-code-branch" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>ML Pipeline Setup</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-brain" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Prediction Output</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹6,000–₹15,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Sales Prediction for Shops</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for retailers needing inventory and revenue forecasting.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Predictive models to forecast sales based on historical data.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-line" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Time Series Forecasting</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-tachometer-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Prediction Dashboard</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-cogs" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Deployment Instructions</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹8,000–₹20,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Task Automation (Python Bot)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for repetitive data entry or communication tasks.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Custom Python bot to automate mundane business tasks.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-robot" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Custom Python Bot</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-globe" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Website/Data Scraping</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-envelope-open-text" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Email/WhatsApp Integration</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹5,000–₹15,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">6. AI-Powered Dashboards</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Google Sheets + AppScript</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for simple, low-cost KPI tracking for shop owners.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Real-time dashboards using Google's cloud tools.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-database" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Google Sheets Data Source</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-sync-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Real-time KPI Tracking</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-cloud" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>AppScript Automation</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹2,000–₹6,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Flask + Chart.js/Plotly</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for custom, secure web dashboards with authentication.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A custom web dashboard with advanced visualization.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-lock" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>User Login & Auth</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-area" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Custom Charts (Chart.js/Plotly)</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-desktop" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Custom Web Interface</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹8,000–₹20,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Power BI/Tableau Setup</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for professional reports and executive dashboards.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Setup and deployment of industry-standard BI tools.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-plug" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Data Source Connection</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-pdf" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Interactive Report Creation</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-share-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Embedding & Sharing Setup</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹7,000–₹18,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">7. WhatsApp Automation for Shops</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Catalog Sharing Bot</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for easy product sharing and initial customer engagement.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A bot to automate sharing of your product catalog.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-share-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Click to WhatsApp Link</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-robot" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Product Auto-Reply Bot</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-folder-open" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Catalog Integration</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹999–₹2,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point popular" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #00d4ff; border-radius: 12px; padding: 35px 30px 30px 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <div class="popular-badge" style="position: absolute; top: -15px; right: 20px; background-color: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1;">Most Popular</div>
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Order Bot (Form + Summary)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for streamlining order capture and daily sales tracking.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Automates the order process with form and summary reports.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-contract" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>WhatsApp Order Form</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-envelope" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Daily Sales Summary</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-check-double" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Order Confirmation</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹2,500–₹6,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Full WhatsApp Store</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for creating a complete sales channel on WhatsApp.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Integrates inventory, payments, and a full chatbot experience.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-boxes" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Inventory Management</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-credit-card" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Razorpay Integration</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-comments" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Advanced Chatbot Flow</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹10,000–₹25,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">8. Billing Apps for Indian Retailers</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Basic Tally-like App</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for small businesses needing simple, offline billing software.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Desktop-based application for basic invoicing and accounting.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-desktop" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Desktop Python/Excel-Based</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-invoice" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Simple Invoice Generation</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-calculator" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Basic Accounting</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹4,000–₹8,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point popular" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #00d4ff; border-radius: 12px; padding: 35px 30px 30px 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <div class="popular-badge" style="position: absolute; top: -15px; right: 20px; background-color: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1;">Growth Choice</div>
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Android POS App</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for retail stores needing mobile POS and inventory control.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A mobile Point-of-Sale app with advanced retail features.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fab fa-android" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Native Android App</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-print" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Invoice Printing</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-pie" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>GST & Stock Tracking</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹10,000–₹25,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Web Billing Dashboard</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for businesses requiring multi-user access and remote login.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Web-based platform for managing sales and PDF invoices.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-lock-open" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Secure Login Access</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-bar" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Sales Dashboard</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-pdf" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>PDF Invoice Generation</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹8,000–₹15,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">9. SEO & Optimization</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Local SEO (Google Maps)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for local shops and services targeting nearby customers.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Optimizing your presence on Google Maps and local search.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-map-marker-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>GMB Setup & Optimization</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-star" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Review Management</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-key" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Local Keyword Map</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹2,000–₹3,500</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point popular" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #00d4ff; border-radius: 12px; padding: 35px 30px 30px 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <div class="popular-badge" style="position: absolute; top: -15px; right: 20px; background-color: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1;">Full Service</div>
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Full Website SEO</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for improving overall website authority and organic rank.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A comprehensive plan covering both on-page and off-page SEO.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-cogs" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>On-page & Off-page SEO</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-bolt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Website Speed Optimization</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-sitemap" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Keyword Strategy</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹5,000–₹12,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">SEO + Blog Writing</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for continuous content marketing and rank growth.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Combining technical SEO with fresh, targeted content.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-pen-nib" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>4 Blogs + SEO</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-line" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>SEO Optimization for Content</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-calendar-check" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Content Calendar Planning</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹6,000–₹10,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">10. Data Analytics Agency Services</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Retail Insights Dashboard</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for retailers looking to understand profit and sales trends.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Turns raw sales data into actionable business intelligence.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-csv" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>CSV Data Processing</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-bar" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Profit/Loss Analysis Charts</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Actionable Insights Summary</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹5,000–₹15,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point popular" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #00d4ff; border-radius: 12px; padding: 35px 30px 30px 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <div class="popular-badge" style="position: absolute; top: -15px; right: 20px; background-color: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1;">Strategic</div>
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Customer Segmentation</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for targeted marketing and understanding buyer behavior.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Uses ML to group customers for personalized marketing strategies.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-users" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>ML Clustering Algorithm</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-user-tag" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Buyer Persona Development</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-compass" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Targeting Strategy Guide</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹8,000–₹18,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Excel + PowerPoint Reports</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for quick presentation-ready financial reporting.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Polished reports for meetings, investors, or internal review.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-excel" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Advanced Excel Analysis</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-powerpoint" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Professional PPT Summary</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-hand-holding-usd" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Financial Data Visualization</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹2,500–₹7,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">11. Digital Dukaan Developer</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point popular" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #00d4ff; border-radius: 12px; padding: 35px 30px 30px 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <div class="popular-badge" style="position: absolute; top: -15px; right: 20px; background-color: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1;">Starter Pack</div>
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Starter (Basic Site)</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for getting a quick, professional online presence setup.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Covers the fundamentals of a digital storefront setup.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-store-alt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>4 Pages, Product Listing, WhatsApp Button</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fab fa-whatsapp" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>WhatsApp Order Button</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-bolt" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Fast Deployment</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹199–₹299</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Standard</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for a growing business needing better visibility.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Adds features for better customer engagement and search rank.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-th-list" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Product Catalog</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-qrcode" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>QR Poster for Shop</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-search-dollar" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Basic SEO Setup</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹399–₹499</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Premium</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for maximum functionality and dedicated support.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">All-inclusive package with dedicated dashboard and support.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-desktop" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Full Web + App View</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-chart-line" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Admin Dashboard</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-headset" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Dedicated Support</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹599–₹999</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-aos="fade-right" style="text-align: center; margin-top: 60px; margin-bottom: 30px; font-size: 2em; color: #00d4ff;">12. Branding & Packaging Designer</h2>
+            <div class="table-responsive" style="overflow: hidden; padding: 0 20px;">
+                <div class="scroll-cards-container" data-aos="fade-up" style="display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; gap: 30px; padding-bottom: 20px;">
+                    <div class="pricing-card card-snap-point popular" style="--i:1; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #00d4ff; border-radius: 12px; padding: 35px 30px 30px 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <div class="popular-badge" style="position: absolute; top: -15px; right: 20px; background-color: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.85em; letter-spacing: 0.5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1;">Quick Start</div>
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Logo Design</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for new businesses needing a professional, unique identity.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A unique logo design package with full source files.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-drafting-compass" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>3 Unique Concepts</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-file-download" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Source Files (AI, PNG)</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-vector-square" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Vector Ready</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹999–₹2,500</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:2; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Business Card + Stationery</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for professional networking and corporate identity.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Designing essential stationery items to match your brand.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-id-card" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Business Card Design</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-envelope-open" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Letterhead & Envelope Design</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-print" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Print-Ready Files</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹1,000–₹3,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:3; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Product Packaging Design</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for physical products needing attractive shelf appeal.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">Design and setup for product labels, boxes, or pouches.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-box-open" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Label/Box Design</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-ruler-combined" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Die-Cut Setup</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-cube" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>3D Mockup</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹2,500–₹8,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                    <div class="pricing-card card-snap-point" style="--i:4; min-width: 320px; height: 400px; flex-shrink: 0; background: #1e1e1e; border: 1px solid #333; border-radius: 12px; padding: 30px; color: #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; text-align: left; scroll-snap-align: center; animation-delay: calc(var(--i) * 0.1s);">
+                        <h3 style="font-size: 1.5em; color: white; margin-top: 0; margin-bottom: 10px; min-height: 24px;">Full Brand Kit</h3>
+                        <p class="best-for" style="font-style: italic; color: #00d4ff; font-size: 0.95em; margin-top: 0; margin-bottom: 15px;">Best for a new brand requiring a complete visual system.</p>
+                        <p class="deliverables" style="font-size: 1em; line-height: 1.5; color: #ccc; margin-bottom: 0;">A comprehensive package covering all core brand elements.</p>
+                        <ul class="features" style="list-style: none; padding: 0; margin: 15px 0 25px 0; line-height: 1.8;">
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-check-double" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Logo + Color Palette</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-font" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Typography Guidelines</li>
+                            <li style="font-size: 0.95em; color: #ccc; display: flex; align-items: center;"><i class="fas fa-layer-group" style="color: #00d4ff; margin-right: 10px; width: 15px; text-align: center;"></i>Social Media Templates</li>
+                        </ul>
+                        <div class="price-range" style="font-size: 1.8em; font-weight: bold; color: #00d4ff; margin-top: 15px; margin-bottom: 20px;">₹6,000–₹15,000</div>
+                        <a href="#" class="btn-enquire" style="display: block; text-align: center; padding: 12px 20px; background-color: #00d4ff; color: #1a1a1a; text-decoration: none; border-radius: 6px; font-weight: bold;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="static/Design.jpeg" alt="developerbee Logo" class="footer-logo">
+                    <span class="footer-brand-name">DeveloperBee</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@developerbee.com">info@developerbee.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                    <p>Location: Remote / Global</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" title="Facebook"><span class="fab fa-facebook-f"></span> Facebook</a>
+                    <a href="#" title="Twitter"><span class="fab fa-twitter"></span> Twitter</a>
+                    <a href="#" title="LinkedIn"><span class="fab fa-linkedin-in"></span> LinkedIn</a>
+                </div>
+                <p class="footer-copyright">&copy; 2024 DeveloperBee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 800 });
+      // Animate table rows with delay
+      document.querySelectorAll('.scroll-cards-container').forEach(container => {
+        let cards = container.querySelectorAll('.pricing-card');
+        cards.forEach((card, i) => {
+          // Setting the CSS variable for staggered animation in JS (since inline styles can't read :nth-child)
+          card.style.setProperty('--i', i);
+        });
+      });
+      // Existing scripts for particles (removed as the class is not in HTML)
+    </script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>developerbee - Services</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <style>
+/* ========================================================================= */
+/* 1. ISLAND HEADER: Reduced Height, Transparency, and Blur */
+/* ========================================================================= */
+.island-header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* AGGRESSIVELY REDUCED VERTICAL PADDING for THINNER BAR */
+    padding: 0.3em 1.5em; 
+    width: min(97vw, 1050px);
+    background: rgba(0, 0, 0, 0.75); 
+    border-radius: 3em;
+    box-shadow: 0 6px 32px #5ff7ff22, 0 0 0 4px #5ff7ff12; 
+    border: 1.7px solid #5FF7FF44; 
+    z-index: 1300;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    font-family: 'Montserrat', Arial, sans-serif;
+    backdrop-filter: blur(8px); 
+}
+
+/* ========================================================================= */
+/* 2. LOGO, NAVIGATION LINKS, AND ACTION BUTTON: Spacing & Logo Size */
+/* ========================================================================= */
+.island-logo { 
+    display:flex; 
+    align-items:center; 
+    font-size:1.3em; 
+    color:#5ff7ff; 
+    font-weight:700; 
+    letter-spacing:1px; 
+    /* TIGHTER SPACING after logo */
+    padding-right:0.6em; 
+}
+.island-logo img { 
+    /* INCREASED LOGO SIZE */
+    height:42px; /* Increased from 34px */
+    width:auto; 
+    margin-right:.6em; 
+    border-radius:0.6em;
+}
+
+.island-nav { 
+    display:flex; 
+    /* TIGHTER SPACING between links */
+    gap: 0.7em; 
+    align-items:center; 
+    margin:0; 
+    padding:0; 
+}
+.island-nav li { list-style:none; position:relative;}
+.island-nav a { 
+    color:#eafffa; 
+    text-decoration:none; 
+    font-weight:600; 
+    /* TIGHTER PADDING around link text */
+    padding:0.3em 0.8em; 
+    border-radius:.6em; 
+    font-size:1em; 
+    display:block; 
+    transition: color .21s, background .2s;
+}
+.island-nav a:hover, .island-nav a.active { color: #5FF7FF; background:#191e23;}
+
+/* Dropdown menu (kept consistent with transparency/blur) */
+.services-dropdown {
+    display:none; 
+    position: absolute; 
+    left:0; 
+    top:100%; 
+    background: rgba(25, 25, 32, 0.9); 
+    border-radius:0.7em; 
+    min-width:194px; 
+    box-shadow:0 4px 16px #171c1e88;
+    z-index:1001; 
+    flex-direction:column; 
+    overflow:hidden; 
+    padding:0.2em 0; 
+    margin-top:.17em;
+    backdrop-filter: blur(4px);
+}
+.island-nav li:focus-within > .services-dropdown,
+.island-nav li:hover > .services-dropdown {
+    display: flex !important;
+}
+.services-dropdown a {color:#eafffa; background:none; font-size:0.98em; border-radius:0; padding:.83em 1.15em;}
+.services-dropdown a:hover {background:#101215; color:#5FF7FF;}
+
+.island-action { 
+    /* TIGHTER SPACING before button */
+    margin-left:0.6em; 
+}
+.nav-contact-btn {
+    background: #5FF7FF; color: #191e23; border:none; border-radius:1.3em; font-weight:700;
+    font-size:1em; padding:.44em 1.3em; box-shadow:0 2px 8px #5ff7ff55;
+    cursor:pointer; transition:.2s; text-decoration:none; margin-left:0.2em;
+}
+.nav-contact-btn:hover { background:#fffde7; color:#131618;}
+
+/* ========================================================================= */
+/* 3. MOBILE OPTIMIZATION (max-width:800px) */
+/* ========================================================================= */
+@media (max-width:800px){
+    .island-header{
+        /* ENSURE SIDE MARGINS ARE VISIBLE */
+        width: 90vw; 
+        padding:0.5em 0.8em; /* Good internal padding */
+        font-size:1em;
+    }
+    .island-logo{font-size:.93em;}
+    /* INCREASED LOGO SIZE FOR MOBILE */
+    .island-logo img { 
+        height: 38px; /* Slightly smaller than desktop but still larger than original */
+    }
+    .island-action{margin-left:.5em;}
+    
+    .hamburger {display:flex;}
+    .island-nav {
+        position: fixed; flex-direction:column; gap:0.3em; align-items:flex-start;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(8px);
+        top:65px; left:50%; transform:translateX(-50%);
+        border-radius:1.3em; 
+        width: 90vw; /* Aligns with header width */
+        max-width: 330px; 
+        box-shadow:0 8px 40px #181e2844;
+        padding:1em 1em 1em 1.1em;
+        opacity: 0; pointer-events: none; z-index:1401; transition:opacity .23s;
+    }
+    .island-nav.open { opacity:1; pointer-events:auto;}
+    .island-nav li {width:100%;}
+    .services-dropdown {position:static; margin:.3em 0 0 0;}
+}
+
+/* ========================================================================= */
+/* 4. SMALL MOBILE OPTIMIZATION (max-width:420px) */
+/* ========================================================================= */
+@media (max-width:420px){
+    .island-header{
+        width: 90vw;
+        padding:0.3em 0.7em; 
+    }
+    /* INCREASED LOGO SIZE FOR VERY SMALL MOBILE */
+    .island-logo img{height:30px;} /* Increased from 27px */
+    .island-nav{
+        min-width: 90vw; 
+        width: 90vw; 
+        padding:0.7em 0.5em;
+    }
+    .nav-contact-btn{font-size:0.92em;}
+}
+</style>
+</head>
+<body style="background:#121111; margin:0; padding-top: 100px;">
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    <header class="island-header" id="mainHeader">
+  <div class="island-logo">
+    <img src="static/Design.jpeg" alt="developerbee Logo"> DeveloperBee
+  </div>
+  <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="island-nav" id="headerNav">
+    <li><a href="index.html">Home</a></li>
+    <li tabindex="0">
+      <a href="services.html">Services</a>
+      <div class="services-dropdown">
+        <a href="services.html#web-app-development">Web & App Development</a>
+        <a href="services.html#ui-ux-design">UI/UX Design</a>
+        <a href="services.html#seo-site-optimization">SEO & Optimization</a>
+        <a href="services.html#ml-automation">ML & Automation</a>
+        <a href="services.html#business-analysis">Business Analysis</a>
+        <a href="services.html#product-packaging">Product Packaging</a>
+      </div>
+    </li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+  </ul>
+  <div class="island-action">
+    <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+  </div>
+</header>
+    <main>
+        <section id="services" class="services-section page-section">
+            <h1 class="section-title">Our Expertise</h1>
+            <p class="section-intro">We integrate design, technology, and strategy to build impactful digital solutions.</p>
+            
+            <div class="services-grid">
+                <div class="service-card" id="web-app-development" data-aos="fade-up">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web & App Development</h3>
+                    <p>Building robust, scalable, and secure digital platforms tailored to your business needs.</p>
+                    <div class="service-details">
+                        <h4>Comprehensive Web Solutions</h4>
+                        <p>We craft responsive and high-performance websites, e-commerce platforms, and custom web applications. Our expertise spans modern frameworks and robust backend systems, ensuring your online presence is powerful and scalable.</p>
+                        <h4>Mobile App Innovation</h4>
+                        <p>From conceptualization to deployment, we develop native and cross-platform mobile applications for iOS and Android, focusing on intuitive design and seamless user experiences.</p>
+                    </div>
+                    <button class="btn btn-small service-toggle-btn">Learn More</button>
+                </div>
+                <div class="service-card" id="ui-ux-design" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive, engaging, and aesthetically pleasing user interfaces and experiences.</p>
+                    <div class="service-details">
+                        <h4>User-Centered Approach</h4>
+                        <p>Our design process begins and ends with the user. We conduct thorough research, create detailed wireframes, and develop interactive prototypes to ensure every interaction is meaningful and delightful.</p>
+                        <h4>Visual Excellence</h4>
+                        <p>We combine aesthetics with functionality, designing visually stunning interfaces that are easy to navigate and consistent across all devices, enhancing brand perception and user satisfaction.</p>
+                    </div>
+                    <button class="btn btn-small service-toggle-btn">Learn More</button>
+                </div>
+                <div class="service-card" id="seo-site-optimization" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>SEO & Site Optimization</h3>
+                    <p>Enhancing your online visibility and performance to drive organic traffic and conversions.</p>
+                    <div class="service-details">
+                        <h4>Visibility & Ranking</h4>
+                        <p>Our SEO strategies are designed to improve your search engine rankings, driving qualified organic traffic to your website. We focus on keyword research, on-page optimization, and technical SEO to ensure maximum visibility.</p>
+                        <h4>Performance Boost</h4>
+                        <p>Beyond ranking, we optimize site speed, mobile responsiveness, and overall user experience to reduce bounce rates and improve conversion paths, turning visitors into customers.</p>
+                    </div>
+                    <button class="btn btn-small service-toggle-btn">Learn More</button>
+                </div>
+                <div class="service-card" id="ml-automation" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3>ML & Automation</h3>
+                    <p>Leveraging machine learning and automation to streamline processes and unlock new insights.</p>
+                    <div class="service-details">
+                        <h4>Intelligent Automation</h4>
+                        <p>We build custom machine learning models to automate repetitive tasks, analyze complex data sets, and provide predictive insights, leading to significant operational efficiencies and cost savings.</p>
+                        <h4>Data-Driven Decisions</h4>
+                        <p>Our solutions help businesses make smarter decisions by uncovering hidden patterns and trends in data, personalizing user experiences, and optimizing various business functions from sales to logistics.</p>
+                    </div>
+                    <button class="btn btn-small service-toggle-btn">Learn More</button>
+                </div>
+                <div class="service-card" id="business-analysis" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Business Analysis</h3>
+                    <p>Strategic insights and data-driven recommendations to optimize your operations and growth.</p>
+                    <div class="service-details">
+                        <h4>Strategic Insights</h4>
+                        <p>We dive deep into your business processes, market landscape, and competitive environment to identify key challenges and opportunities. Our analysis provides actionable strategies for growth and optimization.</p>
+                        <h4>Process Optimization</h4>
+                        <p>By mapping out current workflows and identifying bottlenecks, we recommend and implement solutions that streamline operations, reduce inefficiencies, and improve overall productivity and profitability.</p>
+                    </div>
+                    <button class="btn btn-small service-toggle-btn">Learn More</button>
+                </div>
+                <div class="service-card" id="product-packaging" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon"><i class="fas fa-box-open"></i></div>
+                    <h3>Product Packaging</h3>
+                    <p>Designing impactful and memorable packaging that captures attention and tells your brand story.</p>
+                    <div class="service-details">
+                        <h4>Brand Storytelling Through Packaging</h4>
+                        <p>We create packaging that does more than just protect; it tells your brand's story, communicates your values, and creates an immediate connection with your target audience on the shelf.</p>
+                        <h4>Functional & Visually Striking</h4>
+                        <p>Our designs balance aesthetics with practicality, ensuring your packaging is not only eye-catching but also functional, protective, and cost-effective, enhancing the overall product experience.</p>
+                    </div>
+                    <button class="btn btn-small service-toggle-btn">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-main container">
+            <h2 class="section-title">Our Plans</h2>
+            <div class="pricing-cards-grid">
+            <!-- Starter -->
+            <div class="pricing-card" data-aos="zoom-in-up">
+                <h3 class="accent">Starter</h3>
+                <div class="plan-price">₹199<span class="price-frequency">/month</span></div>
+                <div class="plan-bestfor">Best for local shops</div>
+                <ul class="plan-features">
+                <li>Basic site (4 pages)</li>
+                <li>Product listing</li>
+                <li>WhatsApp button</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn">Get Started</a>
+            </div>
+            <!-- Growth -->
+            <div class="pricing-card" data-aos="zoom-in-up" data-aos-delay="100">
+                <h3 class="accent">Growth</h3>
+                <div class="plan-price">₹699<span class="price-frequency">/month</span></div>
+                <div class="plan-bestfor">Best for wholesalers</div>
+                <ul class="plan-features">
+                <li>Dynamic website/app</li>
+                <li>Catalog & analytics</li>
+                <li>Integrated payments</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn">Choose Growth</a>
+            </div>
+            <!-- Enterprise -->
+            <div class="pricing-card" data-aos="zoom-in-up" data-aos-delay="200">
+                <h3 class="accent">Enterprise</h3>
+                <div class="plan-price">Custom</div>
+                <div class="plan-bestfor">ERP, AI, Security solutions</div>
+                <ul class="plan-features">
+                <li>ERP from ₹50,000+</li>
+                <li>Custom ML/AI automation</li>
+                <li>Pen-testing & compliance</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn">Contact for Quote</a>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="static/Design.jpeg" alt="developerbee Logo" class="footer-logo" loading="lazy">
+                    <span class="footer-brand-name">DeveloperBee</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@developerbee.com">info@developerbee.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                    <p>Location: Remote / Global</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                </div>
+                <p class="footer-copyright">&copy; 2024 DeveloperBee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="static/header.js"></script>
+    <script src="static/script.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 800 });
+
+      // Service card toggle
+      const toggleButtons = document.querySelectorAll('.service-toggle-btn');
+      toggleButtons.forEach(button => {
+          button.addEventListener('click', () => {
+              const serviceDetails = button.previousElementSibling;
+              const card = button.parentElement;
+              serviceDetails.classList.toggle('open');
+              card.classList.toggle('open');
+              if (serviceDetails.classList.contains('open')) {
+                  button.textContent = 'Learn Less';
+              } else {
+                  button.textContent = 'Learn More';
+              }
+          });
+      });
+
+      // Hide preloader when page loads
+      window.addEventListener('load', function() {
+          const preloader = document.getElementById('preloader');
+          if (preloader) {
+              preloader.style.opacity = '0';
+              setTimeout(() => {
+                  preloader.style.display = 'none';
+              }, 500);
+          }
+      });
+    </script>
+</body>
+</html>

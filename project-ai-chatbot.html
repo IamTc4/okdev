@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chatbot Project Details</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+        rel="stylesheet"
+    />
+    <style>
+        /* --- DESIGN VARIABLES (Reduced Cyan Usage) --- */
+        :root {
+            --color-dark-bg: #121212; /* Main Background */
+            --color-card-bg: #1e1e1e; /* Slightly lighter dark for cards/container */
+            --color-text: #e0e0e0; /* Main Text Color (Less Cyan on text) */
+            --color-primary: #ffffff; /* Primary Title/Heading Text Color */
+            --color-accent: #00fffc; /* Electric Cyan (Reserved for borders and tags) */
+            --color-border: #444444; /* Standard Border Color */
+        }
+
+        /* --- GLOBAL STYLES --- */
+        body {
+            background: var(--color-dark-bg);
+            color: var(--color-text);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER STYLES (Island Header) --- */
+        .island-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--color-card-bg);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s;
+        }
+        .island-header a, .island-header .island-logo {
+            color: var(--color-text); /* Standard text color */
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .island-logo img {
+            height: 24px;
+            width: 24px;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+        .island-nav {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        .island-nav a:hover, .island-action a:hover {
+            color: var(--color-accent); /* Cyan hover for interaction */
+        }
+        .nav-contact-btn {
+            background: var(--color-accent); /* Cyan used for Primary CTA button */
+            color: var(--color-dark-bg) !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 700;
+            transition: opacity 0.3s;
+        }
+        .nav-contact-btn:hover {
+            opacity: 0.9;
+        }
+        .hamburger, .services-dropdown { /* Hide mobile elements on desktop */
+            display: none;
+        }
+        
+        /* --- MAIN CONTAINER --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 90px 2rem 40px; /* Adjusted padding for fixed header */
+        }
+
+        /* --- NEW: PROJECT TITLE --- */
+        .project-title {
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 1rem 0 1.5rem 0;
+            text-align: center;
+            border-bottom: 3px solid var(--color-accent); /* Small accent line */
+            padding-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(0, 255, 252, 0.2); /* Subtle glow */
+        }
+        
+        .container section {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: var(--color-card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* --- HEADINGS (Less Cyan on text) --- */
+        .container h2 {
+            color: var(--color-primary); /* White/Primary for main headings */
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--color-accent); /* Cyan for the underline ONLY */
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        .container h2 svg {
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: middle;
+            stroke: var(--color-accent); /* Cyan used for the icon stroke ONLY */
+        }
+
+        /* --- LIST STYLES --- */
+        .challenges, .results-list {
+            list-style: none;
+            padding: 0;
+        }
+        .challenges li, .results-list li {
+            background: #282828; /* Very dark gray fill */
+            margin-bottom: 0.7rem;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--color-accent); /* Cyan for the border line ONLY */
+            transition: background 0.3s;
+        }
+        .challenges li:hover, .results-list li:hover {
+            background: #333333;
+        }
+        .results-list li strong {
+            color: var(--color-accent); /* Cyan for the key metric name */
+            font-weight: 700;
+        }
+
+        /* --- TECH TAGS (Cyan used for Solid Tags) --- */
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+        .tech-list li {
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            background: var(--color-accent); /* Cyan used for the tag background */
+            color: var(--color-dark-bg); /* Dark text on bright background */
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+        .tech-list li:hover {
+            transform: scale(1.05);
+        }
+        
+        /* --- GALLERY --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            object-fit: cover;
+            border: 1px solid var(--color-border); /* Standard border */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, border-color 0.3s;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            border: 2px solid var(--color-accent); /* Cyan hover border */
+        }
+
+        /* --- RESPONSIVENESS AND MOBILE NAV --- */
+        @media (max-width: 820px) {
+            .island-header { padding: 1rem; }
+            .island-nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #101010;
+                border-top: 1px solid var(--color-border);
+            }
+            .island-nav.open {
+                display: flex;
+                padding: 1rem 0;
+            }
+            .island-nav li {
+                width: 100%;
+                border-bottom: 1px solid #222;
+            }
+            .island-nav a {
+                padding: 0.75rem 2rem;
+                display: block;
+            }
+            .island-action { display: none; }
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 24px;
+                height: 20px;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+            .hamburger span {
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: var(--color-accent);
+                border-radius: 1px;
+            }
+            .container { padding: 90px 1rem 20px; }
+            .project-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="island-header" id="mainHeader">
+        <div class="island-logo">
+            <img src="static/Design.jpeg" alt="developerbee Logo" />
+            DeveloperBee
+        </div>
+        <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="island-nav" id="headerNav">
+            <li><a href="index.html">Home</a></li>
+            <li tabindex="0">
+                <a href="services.html">Services</a>
+                </li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <div class="island-action">
+            <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <h1 class="project-title">Intelligent AI Chatbot System</h1>
+        
+        <section>
+            <h2>
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M8 12l2 2 4-4" />
+                </svg>
+                Project Overview
+            </h2>
+            <p>
+                An intelligent customer service automation system powered by natural
+                language processing and machine learning. The chatbot handles customer
+                inquiries, provides personalized recommendations, and integrates
+                seamlessly with existing systems.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="4" />
+                    <path d="M8 12l2 2 4-4" />
+                </svg>
+                Challenges
+            </h2>
+            <ul class="challenges">
+                <li>Training the AI model with limited customer service data</li>
+                <li>Integrating with multiple backend systems and APIs</li>
+                <li>Ensuring natural conversation flow and context awareness</li>
+                <li>Maintaining high accuracy while handling diverse queries</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true">
+                    <rect x="4" y="4" width="16" height="16" rx="4" />
+                    <path d="M8 12h8" />
+                </svg>
+                Technologies Used
+            </h2>
+            <ul class="tech-list">
+                <li>Python</li>
+                <li>TensorFlow</li>
+                <li>NLP</li>
+                <li>Dialogflow</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true">
+                    <path d="M12 20V4M12 4l-4 4M12 4l4 4" />
+                </svg>
+                Results &amp; Impact
+            </h2>
+            <ul class="results-list">
+                <li><strong>Response Accuracy:</strong> 92% Correct response rate</li>
+                <li><strong>Customer Satisfaction:</strong> 4.65 User satisfaction score</li>
+                <li><strong>Cost Reduction:</strong> -65% Customer service costs</li>
+                <li><strong>Response Time:</strong> 0.3s Average response speed</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="4" />
+                    <circle cx="12" cy="12" r="6" />
+                </svg>
+                Gallery
+            </h2>
+            <div class="gallery">
+                <img
+                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                    alt="AI Chatbot Interface"
+                />
+                <img
+                    src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+                    alt="Conversation Flow"
+                />
+                <img
+                    src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+                    alt="Analytics Dashboard"
+                />
+                <img
+                    src="https://images.unsplash.com/photo-1521791136064-7986c289a20x?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
+                    alt="Training Interface"
+                />
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            var h = document.getElementById('mainHeader');
+            if (window.scrollY > 10) h.classList.add('active');
+            else h.classList.remove('active');
+        });
+
+        // Hamburger menu for mobile
+        const navBtn = document.getElementById('navToggle');
+        const navMenu = document.getElementById('headerNav');
+        navBtn.addEventListener('click', function () {
+            navMenu.classList.toggle('open');
+        });
+
+        // Accessibility: close nav on outside click/mobile tap
+        document.addEventListener('click', function (e) {
+            if (window.innerWidth < 820) {
+                if (!navMenu.contains(e.target) && !navBtn.contains(e.target)) {
+                    navMenu.classList.remove('open');
+                }
+            }
+        });
+
+        // Optional: close menu after link click (mobile UX)
+        document.querySelectorAll('.island-nav a').forEach((link) =>
+            link.addEventListener('click', function () {
+                if (window.innerWidth < 820) navMenu.classList.remove('open');
+            })
+        );
+    </script>
+</body>
+</html>

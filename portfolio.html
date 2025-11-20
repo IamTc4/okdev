@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeveloperBee - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="background:#000; margin:0; padding-top: 100px;">
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <style>
+/* ========================================================================= */
+/* 1. ISLAND HEADER: Reduced Height, Transparency, and Blur */
+/* ========================================================================= */
+.island-header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* AGGRESSIVELY REDUCED VERTICAL PADDING for THINNER BAR */
+    padding: 0.3em 1.5em; 
+    width: min(97vw, 1050px);
+    background: rgba(0, 0, 0, 0.75); 
+    border-radius: 3em;
+    box-shadow: 0 6px 32px #5ff7ff22, 0 0 0 4px #5ff7ff12; 
+    border: 1.7px solid #5FF7FF44; 
+    z-index: 1300;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    font-family: 'Montserrat', Arial, sans-serif;
+    backdrop-filter: blur(8px); 
+}
+
+/* ========================================================================= */
+/* 2. LOGO, NAVIGATION LINKS, AND ACTION BUTTON: Spacing & Logo Size */
+/* ========================================================================= */
+.island-logo { 
+    display:flex; 
+    align-items:center; 
+    font-size:1.3em; 
+    color:#5ff7ff; 
+    font-weight:700; 
+    letter-spacing:1px; 
+    /* TIGHTER SPACING after logo */
+    padding-right:0.6em; 
+}
+.island-logo img { 
+    /* INCREASED LOGO SIZE */
+    height:42px; /* Increased from 34px */
+    width:auto; 
+    margin-right:.6em; 
+    border-radius:0.6em;
+}
+
+.island-nav { 
+    display:flex; 
+    /* TIGHTER SPACING between links */
+    gap: 0.7em; 
+    align-items:center; 
+    margin:0; 
+    padding:0; 
+}
+.island-nav li { list-style:none; position:relative;}
+.island-nav a { 
+    color:#eafffa; 
+    text-decoration:none; 
+    font-weight:600; 
+    /* TIGHTER PADDING around link text */
+    padding:0.3em 0.8em; 
+    border-radius:.6em; 
+    font-size:1em; 
+    display:block; 
+    transition: color .21s, background .2s;
+}
+.island-nav a:hover, .island-nav a.active { color: #5FF7FF; background:#191e23;}
+
+/* Dropdown menu (kept consistent with transparency/blur) */
+.services-dropdown {
+    display:none; 
+    position: absolute; 
+    left:0; 
+    top:100%; 
+    background: rgba(25, 25, 32, 0.9); 
+    border-radius:0.7em; 
+    min-width:194px; 
+    box-shadow:0 4px 16px #171c1e88;
+    z-index:1001; 
+    flex-direction:column; 
+    overflow:hidden; 
+    padding:0.2em 0; 
+    margin-top:.17em;
+    backdrop-filter: blur(4px);
+}
+.island-nav li:focus-within > .services-dropdown,
+.island-nav li:hover > .services-dropdown {
+    display: flex !important;
+}
+.services-dropdown a {color:#eafffa; background:none; font-size:0.98em; border-radius:0; padding:.83em 1.15em;}
+.services-dropdown a:hover {background:#101215; color:#5FF7FF;}
+
+.island-action { 
+    /* TIGHTER SPACING before button */
+    margin-left:0.6em; 
+}
+.nav-contact-btn {
+    background: #5FF7FF; color: #191e23; border:none; border-radius:1.3em; font-weight:700;
+    font-size:1em; padding:.44em 1.3em; box-shadow:0 2px 8px #5ff7ff55;
+    cursor:pointer; transition:.2s; text-decoration:none; margin-left:0.2em;
+}
+.nav-contact-btn:hover { background:#fffde7; color:#131618;}
+
+/* ========================================================================= */
+/* 3. MOBILE OPTIMIZATION (max-width:800px) */
+/* ========================================================================= */
+@media (max-width:800px){
+    .island-header{
+        /* ENSURE SIDE MARGINS ARE VISIBLE */
+        width: 90vw; 
+        padding:0.5em 0.8em; /* Good internal padding */
+        font-size:1em;
+    }
+    .island-logo{font-size:.93em;}
+    /* INCREASED LOGO SIZE FOR MOBILE */
+    .island-logo img { 
+        height: 38px; /* Slightly smaller than desktop but still larger than original */
+    }
+    .island-action{margin-left:.5em;}
+    
+    .hamburger {display:flex;}
+    .island-nav {
+        position: fixed; flex-direction:column; gap:0.3em; align-items:flex-start;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(8px);
+        top:65px; left:50%; transform:translateX(-50%);
+        border-radius:1.3em; 
+        width: 90vw; /* Aligns with header width */
+        max-width: 330px; 
+        box-shadow:0 8px 40px #181e2844;
+        padding:1em 1em 1em 1.1em;
+        opacity: 0; pointer-events: none; z-index:1401; transition:opacity .23s;
+    }
+    .island-nav.open { opacity:1; pointer-events:auto;}
+    .island-nav li {width:100%;}
+    .services-dropdown {position:static; margin:.3em 0 0 0;}
+}
+
+/* ========================================================================= */
+/* 4. SMALL MOBILE OPTIMIZATION (max-width:420px) */
+/* ========================================================================= */
+@media (max-width:420px){
+    .island-header{
+        width: 90vw;
+        padding:0.3em 0.7em; 
+    }
+    /* INCREASED LOGO SIZE FOR VERY SMALL MOBILE */
+    .island-logo img{height:30px;} /* Increased from 27px */
+    .island-nav{
+        min-width: 90vw; 
+        width: 90vw; 
+        padding:0.7em 0.5em;
+    }
+    .nav-contact-btn{font-size:0.92em;}
+}
+</style>
+   <header class="island-header" id="mainHeader">
+      <div class="island-logo">
+        <img src="static/Design.jpeg" alt="developerbee Logo"> DeveloperBee
+      </div>
+      <button class="hamburger" id="navToggle" aria-label="Menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="island-nav" id="headerNav">
+        <li><a href="index.html">Home</a></li>
+        <li tabindex="0">
+          <a href="services.html">Services</a>
+          <div class="services-dropdown">
+            <a href="services.html#web-app-development">Web & App Development</a>
+            <a href="services.html#ui-ux-design">UI/UX Design</a>
+            <a href="services.html#seo-site-optimization">SEO & Optimization</a>
+            <a href="services.html#ml-automation">ML & Automation</a>
+            <a href="services.html#business-analysis">Business Analysis</a>
+            <a href="services.html#product-packaging">Product Packaging</a>
+          </div>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
+      <div class="island-action">
+        <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+      </div>
+    </header>
+    
+    <script>
+      // Header scroll effect
+      window.addEventListener('scroll', function(){
+        var h = document.getElementById('mainHeader');
+        if(window.scrollY > 10) h.classList.add('active');
+        else h.classList.remove('active');
+      });
+      // Hamburger menu for mobile
+      const navBtn = document.getElementById('navToggle');
+      const navMenu = document.getElementById('headerNav');
+      navBtn.addEventListener('click', function(){
+        navMenu.classList.toggle('open');
+      });
+      // Accessibility: close nav on outside click/mobile tap
+      document.addEventListener('click', function(e){
+        if(window.innerWidth < 820){
+          if(!navMenu.contains(e.target) && !navBtn.contains(e.target)){
+            navMenu.classList.remove('open');
+          }
+        }
+      });
+      // Optional: close menu after link click (mobile UX)
+      document.querySelectorAll('.island-nav a').forEach(link =>
+        link.addEventListener('click', function(){
+          if(window.innerWidth < 820) navMenu.classList.remove('open');
+        })
+      );
+    </script>
+
+    <main>
+        <section class="portfolio-hero">
+            <div class="container">
+                <h1 class="portfolio-title">Wow, Just Wow</h1>
+                <p class="portfolio-subtitle">Here's just a sample of how we embody design-thinking and strategy to help you achieve your big dream.</p>
+                
+                <div class="portfolio-filter">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="web-development">Web Development</button>
+                        <button class="filter-btn" data-filter="ui-ux">UI/UX Design</button>
+                        <button class="filter-btn" data-filter="branding">Branding</button>
+                        <button class="filter-btn" data-filter="automation">ML & Automation</button>
+                        <button class="filter-btn" data-filter="analytics">Data Analytics</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-grid-section">
+            <div class="container">
+                <div class="portfolio-grid">
+                    <div class="project-card" data-category="web-development">
+                        <div class="project-image">
+                            <img src="static\photo\ecoms.png" alt="E-Commerce Platform">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>E-Commerce Platform</h3>
+                                    <p>Full-stack e-commerce solution with advanced features</p>
+                                    <a href="project-ecommerce-platform.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web-development">
+                        <div class="project-image">
+                            <video src="static\photo\fintech.mp4" alt="Fintech Dashboard" loop autoplay muted></video>
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Fintech Dashboard</h3>
+                                    <p>Real-time financial analytics and reporting platform</p>
+                                    <a href="project-fintech-dashboard.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web-development">
+                        <div class="project-image">
+                            <img src="static\photo\crm.png" alt="CRM System">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>CRM System</h3>
+                                    <p>Custom customer relationship management platform</p>
+                                    <a href="project-crm-system.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-ux">
+                        <div class="project-image">
+                            <video src="static\photo\Fitness_App.mp4" alt="Mobile App Design" loop autoplay muted></video >
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Mobile App Design</h3>
+                                    <p>Complete UI/UX design for fitness tracking app</p>
+                                    <a href="project-mobile-app-design.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-ux">
+                        <div class="project-image">
+                            <video src="static\photo\Healthcare_Portal.mp4" alt="Healthcare Portal" loop autoplay muted></video>
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Healthcare Portal</h3>
+                                    <p>Patient management system with intuitive interface</p>
+                                    <a href="project-healthcare-portal.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="ui-ux">
+                        <div class="project-image">
+                            <video src="static\photo\E_Learning_Platform.mp4" alt="E-Learning Platform" loop autoplay muted></video>
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>E-Learning Platform</h3>
+                                    <p>Interactive learning management system design</p>
+                                    <a href="project-e-learning-platform.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="branding">
+                        <div class="project-image">
+                            <video src="static\photo\startup.mp4" alt="Tech Startup Brand" loop autoplay muted></video >
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Tech Startup Brand</h3>
+                                    <p>Complete brand identity for AI-powered startup</p>
+                                    <a href="project-tech-startup-brand.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="branding">
+                        <div class="project-image">
+                            <img src="static\photo\brand.png" alt="Restaurant Branding">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Restaurant Branding</h3>
+                                    <p>Visual identity and packaging for premium restaurant</p>
+                                    <a href="project-restaurant-branding.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="branding">
+                        <div class="project-image">
+                            <img src="static\photo\brand2.png" alt="Wellness Brand">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Wellness Brand</h3>
+                                    <p>Complete brand identity for health & wellness company</p>
+                                    <a href="project-wellness-brand.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="automation">
+                        <div class="project-image">
+                            <img src="static\photo\chatbot.png" alt="AI Chatbot">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>AI Chatbot</h3>
+                                    <p>Intelligent customer service automation system</p>
+                                    <a href="project-ai-chatbot.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="automation">
+                        <div class="project-image">
+                            <img src="static\photo\auto.png" alt="Process Automation">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Process Automation</h3>
+                                    <p>Workflow automation for manufacturing company</p>
+                                    <a href="project-process-automation.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="analytics">
+                        <div class="project-image">
+                            <img src="static\photo\buisanalytics.png" alt="Business Intelligence">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Business Intelligence</h3>
+                                    <p>Advanced analytics dashboard for retail chain</p>
+                                    <a href="project-business-intelligence.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="analytics">
+                        <div class="project-image">
+                            <img src="static\photo\last.png" alt="Predictive Analytics">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Predictive Analytics</h3>
+                                    <p>ML-powered forecasting for financial services</p>
+                                    <a href="project-predictive-analytics.html" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="static/Design.jpeg" alt="developerbee Logo" class="footer-logo">
+                    <span class="footer-brand-name">DeveloperBee</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@developerbee.com">info@developerbee.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                    <p>Location: Remote / Global</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" title="Facebook"><span class="fab fa-facebook-f"></span> Facebook</a>
+                    <a href="#" title="Twitter"><span class="fab fa-twitter"></span> Twitter</a>
+                    <a href="#" title="LinkedIn"><span class="fab fa-linkedin-in"></span> LinkedIn</a>
+                </div>
+                <p class="footer-copyright">&copy; 2024 DeveloperBee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/script.js"></script> 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to the clicked button
+                    button.classList.add('active');
+
+                    const filter = button.dataset.filter;
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
