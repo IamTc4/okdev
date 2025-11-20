@@ -140,7 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { selector: '.pricing-card', y: 60, rotationX: -6 },
             { selector: '.carousel-item', y: 80, rotationY: 8 },
             { selector: '.testimonial-card', y: 60, rotationX: -5 },
-            { selector: '.contact-details-grid .detail-card', y: 60, rotationX: 5 }
+            { selector: '.contact-details-grid .detail-card', y: 60, rotationX: 5 },
+            { selector: '.tool-logos-grid img', y: 30, scale: 0.8 }
         ];
 
         scrollGroups.forEach(group => {
