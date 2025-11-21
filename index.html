@@ -415,7 +415,14 @@
   </div>
 </header>
 <body>
-    <canvas id="bg"></canvas>
+    <div class="fixed-video-bg">
+        <video autoplay loop muted playsinline class="video-background">
+            <source src="static/ok.webm" type="video/webm">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <div id="three-container"></div>
+    <!-- <canvas id="bg"></canvas> -->
     <div id="preloader">
         <div class="spinner"></div>
     </div>

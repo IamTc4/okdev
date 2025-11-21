@@ -24,9 +24,7 @@
 }
 
 body {
-    background: radial-gradient(circle at 20% 20%, rgba(95, 247, 255, 0.1), transparent 45%),
-        radial-gradient(circle at 80% 0%, rgba(95, 247, 255, 0.08), transparent 35%),
-        #000;
+    background: transparent;
     font-family: 'Montserrat', 'Playfair Display', Arial, sans-serif;
     color: #ffffff;
     line-height: 1.6;
@@ -140,7 +138,49 @@ section.reveal {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -3;
+}
+
+.fixed-video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay to ensure text readability */
+    backdrop-filter: blur(3px); /* Slight blur for depth */
+}
+
+#three-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -4; /* Above video, behind content */
+    pointer-events: none;
 }
 
 .content-wrapper {
@@ -351,11 +391,13 @@ img, iframe {
     position: relative;
     overflow: hidden;
     padding-top: calc(var(--space-xl) + 3rem);
-    background: var(--gradient-hero);
+    background: radial-gradient(circle at top left, rgba(95, 247, 255, 0.15), transparent 50%),
+                radial-gradient(circle at bottom right, rgba(66, 226, 255, 0.1), transparent 50%);
     border: 1px solid rgba(95, 247, 255, 0.08);
     border-radius: 40px;
     margin-top: var(--space-lg);
     margin-bottom: var(--space-lg);
+    backdrop-filter: blur(10px);
 }
 
 .hero::after {
@@ -674,12 +716,14 @@ img, iframe {
 }
 
 .service-card {
-    background-color: #000000;
+    background-color: rgba(10, 10, 12, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 40px 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -822,11 +866,13 @@ img, iframe {
 }
 
 .category-card {
-    background-color: #000000;
+    background-color: rgba(10, 10, 12, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1258,8 +1304,17 @@ img, iframe {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* ADDED: Use Flexbox to stack content */
+    display: flex;
+    flex-direction: column;
+    /* Set a dark background for the whole item */
+    background: rgba(25, 25, 25, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .carousel-item:hover {
@@ -1274,13 +1329,12 @@ img, iframe {
 }
 
 .carousel-item-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    padding: 2rem 1.5rem 1.5rem;
+    position: relative; /* Changed from absolute to relative */
+    /* REMOVED: background: linear-gradient(...) */
+    background: transparent; /* Solid background matching the item */
+    padding: 1rem 1.5rem 1.5rem; /* Adjusted vertical padding */
     color: #fff;
+    flex-grow: 1; /* Allows the content area to expand if needed */
 }
 
 .carousel-item-content h2 {
@@ -1491,11 +1545,13 @@ img, iframe {
 }
 
 .detail-card {
-    background-color: var(--dark-bg);
+    background-color: rgba(10, 10, 12, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
 }
 
@@ -1799,11 +1855,13 @@ img, iframe {
 }
 
 .testimonial-card {
-    background-color: var(--dark-surface);
+    background-color: rgba(10, 10, 12, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -2020,11 +2078,13 @@ img, iframe {
 }
 
 .team-member-card {
-    background-color: var(--dark-surface);
+    background-color: rgba(10, 10, 12, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -2072,15 +2132,25 @@ img, iframe {
     justify-content: center;
 }
 .category-card, .client-logos-grid img, .project-card, .team-member-card, .testimonial-card, .detail-card, .service-card {
-    background: #000000;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 1rem;
-    box-shadow: 0 2px 12px #5FF7FF11;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.2rem;
     flex: 1 1 260px;
     min-width: 220px;
     max-width: 340px;
     margin: 0.5rem 0;
     text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.category-card:hover, .service-card:hover, .project-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Table Wrapper (for pricing, etc.) */
@@ -2441,17 +2511,24 @@ label {
     margin-bottom: 2.5em;
   }
   .pricing-card {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(255, 255, 255, 0.05); /* More transparent glass */
     border-radius: 2em;
     box-shadow:
-      0 8px 32px 0 rgba(0,0,0,0.18),
+      0 8px 32px 0 rgba(0,0,0,0.3),
       0 2px 8px 0 #5ff7ff33;
-    backdrop-filter: blur(16px) saturate(1.3);
-    border: 1.5px solid #5FF7FF55;
-    transition: transform 0.18s cubic-bezier(.25,.8,.25,1), box-shadow 0.22s cubic-bezier(.25,.8,.25,1);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(95, 247, 255, 0.15);
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1), border-color 0.3s;
     margin: 1.1em;
     padding: 2em 1.3em 1.7em 1.3em;
-  }
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(95, 247, 255, 0.15);
+    border-color: rgba(95, 247, 255, 0.5);
+}
 
 /* Carousel Styles */
 .carousel-container {
@@ -2484,14 +2561,17 @@ label {
     position: relative;
     border-radius: 1rem;
     overflow: hidden; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
     /* ADDED: Use Flexbox to stack content */
     display: flex;
     flex-direction: column;
     /* Set a dark background for the whole item */
-    background: #191919; 
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .carousel-item:hover {
@@ -2511,7 +2591,7 @@ label {
 .carousel-item-content {
     position: relative; /* Changed from absolute to relative */
     /* REMOVED: background: linear-gradient(...) */
-    background: #272626; /* Solid background matching the item */
+    background: transparent; /* Solid background matching the item */
     padding: 1rem 1.5rem 1.5rem; /* Adjusted vertical padding */
     color: #fff;
     flex-grow: 1; /* Allows the content area to expand if needed */
